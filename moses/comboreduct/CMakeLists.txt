@@ -8,6 +8,7 @@ ADD_SUBDIRECTORY(main)
 ADD_SUBDIRECTORY(man)
 ADD_SUBDIRECTORY(crutil)
 ADD_SUBDIRECTORY(converter)
+ADD_SUBDIRECTORY(atomese_representation)
 
 ADD_LIBRARY(comboreduct SHARED
 	crutil/exception
@@ -62,6 +63,8 @@ ADD_LIBRARY(comboreduct SHARED
 	reduct/reduct
 
 	converter/combo_atomese
+
+	atomese_representation/atomese_representation
 )
 
 TARGET_LINK_LIBRARIES (comboreduct
@@ -84,7 +87,6 @@ TARGET_LINK_LIBRARIES (comboant
 	comboreduct
 	${COGUTIL_LIBRARY}
 )
-
 
 #install library
 IF (WIN32)
